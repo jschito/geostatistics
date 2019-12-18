@@ -11285,8 +11285,10 @@ library(tmap)
 			<br>You will be using the R package <strong>gstat</strong>, which provides basic functionality for
             geostatistical analysis in order to perform inverse distance spatial interpolation, conduct variogram
             estimation and modeling, spatial prediction using different types of Kriging, as well as get a glimpse of
-            geostatistical simulation.</p>
-        <p>The particular data set considered in this course consists of zinc concentrations (in ppm), as well as their
+            geostatistical simulation.You find a brief tutorial for the gstat R package as a R vignette on
+			<a href="https://cran.r-project.org/web/packages/gstat/vignettes/gstat.pdf" target="_blank">vignettes gstat</a> .</p>
+			
+			<p>The particular data set considered in this course consists of zinc concentrations (in ppm), as well as their
             natural logarithm to work with a data set with less skewed distribution. As a start, you will be displaying
             the map of all zinc concentrations, the histogram of zinc concentrations and that of the logarithms of zinc
             concentrations. When looking at the spatial distribution of the concentration values, keep in mind that the
@@ -11295,14 +11297,17 @@ library(tmap)
 	<br><br>
     <div id="descriptive_statistics" class="section level1">
         <h1>Descriptive Statistics</h1>
-        <p>Import Meuse data set and display info</p>
+        <p>Import Meuse data set of the sp package and display info</p>
         <pre class="r"><code>data(meuse, package = &quot;sp&quot;)
 class(meuse)</code></pre>
         <pre><code>## [1] &quot;data.frame&quot;</code></pre>
+		<p>Show the header of meuse</p>
         <pre class="r"><code>names(meuse)</code></pre>
         <pre><code>##  [1] &quot;x&quot;       &quot;y&quot;       &quot;cadmium&quot; &quot;copper&quot;  &quot;lead&quot;    &quot;zinc&quot;    &quot;elev&quot;
 ##  [8] &quot;dist&quot;    &quot;om&quot;      &quot;ffreq&quot;   &quot;soil&quot;    &quot;lime&quot;    &quot;landuse&quot; &quot;dist.m&quot;</code></pre>
-        <pre class="r"><code>str(meuse)</code></pre>
+        
+		<p>Display the internal structure of the meuse object (it's a diagnostic function and an alternative to "summary")</p>
+		<pre class="r"><code>str(meuse)</code></pre>
         <pre><code>## &#39;data.frame&#39;:    155 obs. of  14 variables:
 ##  $ x      : num  181072 181025 181165 181298 181307 ...
 ##  $ y      : num  333611 333558 333537 333484 333330 ...
@@ -11318,7 +11323,8 @@ class(meuse)</code></pre>
 ##  $ lime   : Factor w/ 2 levels &quot;0&quot;,&quot;1&quot;: 2 2 2 1 1 1 1 1 1 1 ...
 ##  $ landuse: Factor w/ 15 levels &quot;Aa&quot;,&quot;Ab&quot;,&quot;Ag&quot;,..: 4 4 4 11 4 11 4 2 2 15 ...
 ##  $ dist.m : num  50 30 150 270 380 470 240 120 240 420 ...</code></pre>
-        <p>Spatial display using ggplot</p>
+        <p>Spatial display using ggplot: ggplot is a plotting system for Python based on R's ggplot2 and the Grammar of Graphics.
+		It is built for making aesthetic plots quickly with minimal code <a href="https://ggplot2.tidyverse.org/reference/ggplot.html" target="_blank">... read more</a></p>
         <pre class="r"><code>ggplot(meuse, aes(x,y)) +
   geom_point(aes(color = zinc), size = 2, alpha = 3/4) +
   ggtitle(&quot;Zinc Concentration (ppm)&quot;) + coord_equal() + theme_bw()</code></pre>
