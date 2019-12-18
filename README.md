@@ -1,0 +1,2 @@
+# geostatistics
+Exercises on Geostatistics
