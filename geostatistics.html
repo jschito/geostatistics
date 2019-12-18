@@ -11248,16 +11248,22 @@
     </div>
 
     <div id="overview">
-        <h2>Overview</h2>
+        <h3>Overview</h3>
         <ul>
-            <li><h3><a href=#descriptive_statistics>Descriptive Statistics</a></h3></li>
-            <li><h3><a href=#inverse-distance-weighting-spatial-interpolation>IDW</a></h3></li>
-            <li><h3><a href=#kriging-introduction>Kriging</a></h3></li>
+            <li><h4><a href=#descriptive_statistics>Descriptive Statistics</a></h4></li>
+            <li><h4><a href=#inverse-distance-weighting-spatial-interpolation>IDW</a></h4></li>
+            <li><h4><a href=#kriging-introduction>Kriging</a></h4></li>
         </ul>
     </div>
+	<br>
+	<br>
 
-    <p>Invoke relevant libraries</p>
-    <pre class="r"><code>suppressPackageStartupMessages({
+   
+    <div id="preview" class="section level1">
+        <h1>Introduction</h1>
+		
+		<p>First, invoke the relevant libraries for this session</p>
+<pre class="r"><code>suppressPackageStartupMessages({
 library(knitr)
 library(sp)
 library(gstat)
@@ -11266,13 +11272,17 @@ library(ggplot2)
 library(sf)
 library(tmap)
 })</code></pre>
-    <div id="preview" class="section level1">
-        <h1>Preview</h1>
+
         <p>In this course, you will be working with the <em>meuse</em> data set, which comprises data on four heavy
             metals measured in the top soil layer in a flood plain along the river Meuse in The Netherlands, along with
             a handful of covariates. The process governing heavy metal distribution appears to involve transport of
             polluted sediment by the river, and subsequent deposition mostly close to the river bank, and areas with low
-            elevation. You will be using the R package <strong>gstat</strong>, which provides basic functionality for
+            elevation. <br>
+			<p align="center"><img src="map.jpg" width="300" /></p>
+			<br>
+			
+			
+			<br>You will be using the R package <strong>gstat</strong>, which provides basic functionality for
             geostatistical analysis in order to perform inverse distance spatial interpolation, conduct variogram
             estimation and modeling, spatial prediction using different types of Kriging, as well as get a glimpse of
             geostatistical simulation.</p>
@@ -11282,6 +11292,7 @@ library(tmap)
             concentrations. When looking at the spatial distribution of the concentration values, keep in mind that the
             Meuse river bank is located at the west and southwest border of the region.</p>
     </div>
+	<br><br>
     <div id="descriptive_statistics" class="section level1">
         <h1>Descriptive Statistics</h1>
         <p>Import Meuse data set and display info</p>
