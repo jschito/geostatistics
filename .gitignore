@@ -27,6 +27,9 @@ pip-delete-this-directory.txt
 *.db-journal
 *.sql
 
+# Jupyter Notebook
+.ipynb_checkpoints/
+
 # Compiled code
 *.o
 *.out
