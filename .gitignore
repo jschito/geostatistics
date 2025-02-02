@@ -58,3 +58,4 @@ coverage/
 
 # Ignore spatial_autocorrelation_preparation folder
 spatial_autocorrelation_preparation/
+_ignore/
