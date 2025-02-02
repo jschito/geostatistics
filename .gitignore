@@ -1,0 +1,57 @@
+# Ignore environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pdb
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.sql
+
+# Compiled code
+*.o
+*.out
+*.class
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build directories
+dist/
+build/
+target/
+coverage/
+
+# Ignore spatial_autocorrelation_preparation folder
+spatial_autocorrelation_preparation/
