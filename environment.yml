@@ -6,7 +6,6 @@ dependencies:
   - gdal>=3.9.2
   - geopandas
   - folium
-  - pysal
   - libpysal
   - esda
   - seaborn
